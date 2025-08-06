@@ -1,5 +1,5 @@
 <?php 
-    
+
     include './teste.php';
     echo "$name <br><hr>";
     
@@ -40,4 +40,29 @@
 
     //Null
     $myNull = null;
-    echo gettype($myNull), $myNull;
+    echo gettype($myNull), "$myNull <hr>";
+
+    $name2 = 'Ermeson';
+    // O & comercial serve para fazer referência em uma variavel.
+    $myName2 = &$name2;
+    $name2 = 'Miguel';
+
+    echo $name2;
+    echo "$myName2 <hr>";
+
+    // Variaveis constantes
+    define('PERSON', 'Miguel');
+    echo PERSON, "<hr>";
+
+
+    function teste() {
+        echo __FUNCTION__, "<br>";
+        echo __METHOD__, "<hr>";
+    }
+
+    teste();
+    
+
+    $isTrue = true;
+    echo ($isTrue) ? 'A variável é verdadeira <hr>' : 'A Variável é falsa <hr>';
+
